@@ -30,7 +30,7 @@ $artist = $album->getArtist();
 
 <div class="tracklistContainer">
 	<ul class="tracklist">
-		
+
 		<?php
 		$songIdArray = $album->getSongIds();
 
@@ -72,8 +72,8 @@ $artist = $album->getArtist();
 		?>
 
 		<script>
-			
-			var tempSongIds = '<?php echo json_encode($songIdArray); ?>';		
+
+			var tempSongIds = '<?php echo json_encode($songIdArray); ?>';
 			tempPlaylist = JSON.parse(tempSongIds);
 			console.log(tempPlaylist);
 		</script>
@@ -84,7 +84,7 @@ $artist = $album->getArtist();
 
 
 <nav class="optionsMenu">
-	
+
 
 	<input type="hidden" class="songId">
 	<?php echo Playlist::getPlaylistDropdown($con, $userLoggedIn->getUsername()); ?>

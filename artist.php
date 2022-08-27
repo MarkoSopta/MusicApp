@@ -14,13 +14,13 @@ $artist = new Artist($con, $artistId);
 ?>
 
 <div class="entityInfo borderBottom">
-	
+
 	<div class="centerSection">
-		
+
 		<div class="artistInfo">
-			
+
 			<h1 class="artistName">
-				
+
 				<?php echo $artist->getName(); ?>
 
 			</h1>
@@ -39,7 +39,7 @@ $artist = new Artist($con, $artistId);
 <div class="tracklistContainer borderBottom">
 	<h2>SONGS</h2>
 	<ul class="tracklist">
-		
+
 		<?php
 		$songIdArray = $artist->getSongIds();
 
@@ -84,8 +84,8 @@ $artist = new Artist($con, $artistId);
 		?>
 
 		<script>
-			
-			var tempSongIds = '<?php echo json_encode($songIdArray); ?>';		
+
+			var tempSongIds = '<?php echo json_encode($songIdArray); ?>';
 			tempPlaylist = JSON.parse(tempSongIds);
 			console.log(tempPlaylist);
 		</script>
@@ -100,7 +100,7 @@ $artist = new Artist($con, $artistId);
 		$albumQuery = mysqli_query($con, "SELECT * FROM albums WHERE artist='$artistId'");
 
 		while($row = mysqli_fetch_array($albumQuery)) {
-			
+
 
 
 
@@ -123,7 +123,7 @@ $artist = new Artist($con, $artistId);
 </div>
 
 <nav class="optionsMenu">
-	
+
 
 	<input type="hidden" class="songId">
 	<?php echo Playlist::getPlaylistDropdown($con, $userLoggedIn->getUsername()); ?>

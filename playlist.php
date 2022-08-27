@@ -16,11 +16,11 @@ $owner = new User($con, $playlist->getOwner());
 
 	<div class="leftSection">
 		<div class="playlistImage">
-			
+
 			<img src="assets/images/icons/playlist.png">
 
 		</div>
-		
+
 	</div>
 
 	<div class="rightSection">
@@ -36,7 +36,7 @@ $owner = new User($con, $playlist->getOwner());
 
 <div class="tracklistContainer">
 	<ul class="tracklist">
-		
+
 		<?php
 		$songIdArray = $playlist->getSongIds();
 
@@ -78,8 +78,8 @@ $owner = new User($con, $playlist->getOwner());
 		?>
 
 		<script>
-			
-			var tempSongIds = '<?php echo json_encode($songIdArray); ?>';		
+
+			var tempSongIds = '<?php echo json_encode($songIdArray); ?>';
 			tempPlaylist = JSON.parse(tempSongIds);
 			console.log(tempPlaylist);
 		</script>
@@ -89,7 +89,7 @@ $owner = new User($con, $playlist->getOwner());
 </div>
 
 <nav class="optionsMenu">
-	
+
 
 	<input type="hidden" class="songId">
 	<?php echo Playlist::getPlaylistDropdown($con, $userLoggedIn->getUsername()); ?>
