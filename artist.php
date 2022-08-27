@@ -6,7 +6,7 @@ if(isset($_GET['id'])) {
 	$artistId = $_GET['id'];
 }
 else {
-	header("Location: index.php");
+	header("Location: index.html");
 }
 
 $artist = new Artist($con, $artistId);

@@ -5,7 +5,7 @@ if(isset($_GET['id'])) {
 	$playlistId = $_GET['id'];
 }
 else {
-	header("Location: index.php");
+	header("Location: index.html");
 }
 
 $playlist = new Playlist($con, $playlistId);
