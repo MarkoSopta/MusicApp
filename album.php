@@ -5,7 +5,7 @@ if(isset($_GET['id'])) {
 	$albumId = $_GET['id'];
 }
 else {
-	header("Location: index.html");
+	header("Location: index.php");
 }
 
 $album = new Album($con, $albumId);
