@@ -249,11 +249,11 @@ function debug(){
 						<img src="assets/images/icons/previous.png" alt="Previous">
 					</button>
 
-					<button class="controlButton play" title="Play button" onclick="debug()" >
+					<button class="controlButton play" title="Play button" onclick="playSong()" >
 						<img src="assets/images/icons/play.png" alt="Play">
 					</button>
 
-					<button class="controlButton pause" title="Pause button" style="display: none;" onclick="debug()">
+					<button class="controlButton pause" title="Pause button" style="display: none;" onclick="pauseSong()">
 						<img src="assets/images/icons/pause.png" alt="Pause">
 					</button>
 
