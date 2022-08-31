@@ -201,6 +201,10 @@ function pauseSong() {
 	audioElement.pause();
 }
 
+function debug(){
+	console.log("click")
+}
+
 </script>
 
 
@@ -245,11 +249,11 @@ function pauseSong() {
 						<img src="assets/images/icons/previous.png" alt="Previous">
 					</button>
 
-					<button class="controlButton play" title="Play button" onclick="playSong()">
+					<button class="controlButton play" title="Play button" onclick="debug()" >
 						<img src="assets/images/icons/play.png" alt="Play">
 					</button>
 
-					<button class="controlButton pause" title="Pause button" style="display: none;" onclick="pauseSong()">
+					<button class="controlButton pause" title="Pause button" style="display: none;" onclick="debug()">
 						<img src="assets/images/icons/pause.png" alt="Pause">
 					</button>
 
